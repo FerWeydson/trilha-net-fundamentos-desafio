@@ -1,6 +1,9 @@
 # DIO - Trilha .NET - Fundamentos
 www.dio.me
 
+# Como utilizar o sistema?
+Para utilizar o sistema, você deve entrar no caminho DesafioFundamentos\Executavel e rodar o DesafioFundamentos.exe.
+
 ## Desafio de projeto
 Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
 
