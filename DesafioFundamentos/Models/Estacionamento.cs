@@ -54,9 +54,11 @@ namespace DesafioFundamentos.Models
 
                 if (string.IsNullOrWhiteSpace(placaVeiculo) || placaVeiculo.Length > 7)
                 {
-                    Console.WriteLine("Placa inválida. A placa deve conter no máximo 7 caracteres. Tente novamente.");
+                    Console.WriteLine("Placa não existe no sistema ou está inválida.\n" +
+                    "A placa deve conter no máximo 7 caracteres. Tente novamente.");
                     return;
                 }
+                
 
                 // Verifica se o veículo existe
                 if (veiculos.Any(x => x.ToUpper() == placaVeiculo.ToUpper()))
@@ -68,7 +70,6 @@ namespace DesafioFundamentos.Models
 
                     // TODO: Remover a placa digitada da lista de veículos
                     // *IMPLEMENTE AQUI*
-
                     removerVeiculo(placaVeiculo);
 
                     Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
@@ -88,9 +89,6 @@ namespace DesafioFundamentos.Models
                 {
                     Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
                 }
-
-                veiculos.Remove(placaVeiculo);
-                Console.WriteLine("Veículo removido com sucesso!");
 
             }
             catch (Exception ex)
@@ -124,6 +122,7 @@ namespace DesafioFundamentos.Models
         private void removerVeiculo(string placaVeiculo)
         {
             veiculos.Remove(placaVeiculo);
+            Console.WriteLine("Veículo removido com sucesso!");
         }
         private decimal calcularPreco(int horas)
         {
@@ -142,4 +141,3 @@ namespace DesafioFundamentos.Models
         }
     }
 }
-
